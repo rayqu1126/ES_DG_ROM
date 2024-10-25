@@ -2,7 +2,7 @@ using Trixi
 using NonNegLeastSquares
 using LinearAlgebra
 
-trixi_include("FOM_1D_hybridized.jl", N=3, num_elements=512)
+trixi_include("FOM_1D_weak.jl", N=3, num_elements=512)
 
 trixi_include("ROM_1D.jl", Nmodes = 20,
               weight_matrix=sqrt(M))

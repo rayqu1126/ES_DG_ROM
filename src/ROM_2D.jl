@@ -3,7 +3,7 @@
 using Trixi
 using NonNegLeastSquares
 using LinearAlgebra
-# L2ROMList= zeros(0)
+
 FOM_dim = (N+1)^2 * md.num_elements
 function get_POD_modes(Vsnap, N; weight_matrix = I)
     U, s = svd(weight_matrix * Vsnap)

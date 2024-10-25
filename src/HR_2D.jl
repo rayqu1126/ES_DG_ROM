@@ -115,9 +115,6 @@ end
 Px_test = Mx_test_HR \ (Vx_test[ids_HR,:]' * Diagonal(w_HR))
 Py_test = My_test_HR \ (Vy_test[ids_HR,:]' * Diagonal(w_HR))
 
-# Px_test = pinv(Vx_test[ids_HR,:])
-# Py_test = pinv(Vy_test[ids_HR,:])
-
 Qx_HR = Px_test' * (Vx_test' * Qx * Vx_test) * Px_test
 Qy_HR = Py_test' * (Vy_test' * Qy * Vy_test) * Py_test
 

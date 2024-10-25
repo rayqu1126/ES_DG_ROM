@@ -8,3 +8,8 @@
 - **`HR_1D_hybridized.jl`**: Hyper-reduced ROM for 1D domains with weakly imposed boundary conditions (implements reflective wall) using a hybridized operator
 
 ## 2D Domains
+- **`FOM_2D.jl`**: Full order model (FOM) for 2D periodic domains  
+- **`FOM_2D_weak.jl`**: FOM for 2D domains with weakly imposed boundary conditions (implements reflective wall)  
+- **`ROM_2D.jl`**: Galerkin projection ROM for 2D domains (without hyper-reduction)  
+- **`HR_2D.jl`**: Hyper-reduced ROM for 2D periodic domains  
+- **`HR_2D_hybridized.jl`**: Hyper-reduced ROM for 2D domains with weakly imposed boundary conditions (implements reflective wall) using hybridized operators

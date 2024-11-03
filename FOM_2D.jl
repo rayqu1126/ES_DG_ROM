@@ -1,5 +1,4 @@
-using OrdinaryDiffEq
-using StartUpDG, Trixi
+using OrdinaryDiffEq, StartUpDG, Trixi
 using StructArrays, StaticArrays, SparseArrays
 using LinearAlgebra, Plots
 

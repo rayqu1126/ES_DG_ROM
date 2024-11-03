@@ -1,4 +1,6 @@
 # Entropy stable reduced order modeling (ES-ROM) of nonlinear conservation laws using discontinuous Galerkin (DG) methods
+- **`Project.toml`**: Packages (with version restriction) for this peoject
+
 ## 1D Domains
 
 - **`FOM_1D.jl`**: Full order model (FOM) for 1D periodic domains  

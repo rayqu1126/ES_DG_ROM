@@ -98,16 +98,15 @@ end
 
 # this tolerance is purely used for HR
 tol = sqrt(sum(svd_values[Nmodes+1:end].^2) / sum(svd_values.^2))
-V_test = trim_basis([ones(size(V_ROM, 1)) [V_ROM M \ (Q' * V_ROM)]])
+V_test = trim_basis([ones(size(V_ROM, 1)) V_ROM M \ (Q * V_ROM)])
 
 # hyperreduction
 create_target_basis(V1, V2; tol) = 
     trim_basis(hcat([V1[:,i] .* V2[:,j] for i in axes(V1,2), j in axes(V2,2)]...); tol)
 
 e = ones(size(V_ROM, 1))
-V_target = create_target_basis(V_ROM, V_ROM; tol)
+V_target = trim_basis([e create_target_basis(V_ROM, V_ROM; tol)])
 ids_HR, w_HR = greedy_hyperreduction(V_target, V_target' * M.diag, tol)
-# w_HR, ids_HR = caratheodory_pruning(V_target, M.diag)
 
 # hyperreduced operators
 M_test_HR = V_test[ids_HR,:]' * Diagonal(w_HR) * V_test[ids_HR,:]
